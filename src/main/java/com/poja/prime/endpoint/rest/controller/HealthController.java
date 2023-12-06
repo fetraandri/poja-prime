@@ -2,6 +2,8 @@ package com.poja.prime.endpoint.rest.controller;
 
 import static java.util.UUID.randomUUID;
 
+import java.math.BigInteger;
+import java.util.Base64;
 import java.util.List;
 import lombok.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,4 +45,5 @@ public class HealthController {
     Thread.sleep(20_000);
     return dummyUuidRepository.findById(randomUuid).map(DummyUuid::getId).orElseThrow();
   }
+
 }
